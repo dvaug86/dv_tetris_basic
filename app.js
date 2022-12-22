@@ -136,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
             gameOver()
         }
     }
+    
     //move the tetromino left, unless is at the edge or there is a blockage
     function moveLeft() {
         undraw()
@@ -182,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentRotation ===current.length){
             currentRotation =0
         }
-        current = theTetrominoes [random] [currentRotation]
+        current = theTetrominoes [random][currentRotation]
         draw()
     }
 
@@ -245,7 +246,7 @@ function addScore() {
                 squares[index].style.backgroundColor=''
             })
             const squaresRemoved = squares.splice(i, width)
-            squares = squares.Removed.concat(squares)
+            squares = squaresRemoved.concat(squares)
             squares.forEach(cell => grid.appendChild(cell))
         }
     }
@@ -259,6 +260,6 @@ function gameOver(){
     }
 }
 
-
-
 })
+
+/////////////////////////////////////////////////////////////////////////////////////////
